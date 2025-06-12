@@ -5,8 +5,8 @@ const mongoose = require("mongoose");
 require("dotenv").config();
 
 // Import routes
-const authRoutes = require("./routes/auth.routes");
-const userRoutes = require("./routes/user.routes");
+const authRoutes = require("./src/routes/auth.routes");
+const userRoutes = require("./src/routes/user.routes");
 
 // Initialize express app
 const app = express();
