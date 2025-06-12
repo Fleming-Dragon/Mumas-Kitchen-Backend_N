@@ -48,6 +48,10 @@ app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
 
+app.get("/", (req, res) => {
+  res.send("Backend is working!");
+});
+
 app.use(
   cors({
     origin: "http://localhost:5173", // Vite's default port
