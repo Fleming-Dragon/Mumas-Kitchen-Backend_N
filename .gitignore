@@ -12,8 +12,9 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-# Package locks (choose based on your package manager)
-package-lock.json
+#Package locks (keep package-lock.json for production consistency)
+package.json
+package-lock.json  # Uncomment to ignore if using yarn/pnpm
 yarn.lock
 pnpm-lock.yaml
 
@@ -24,6 +25,25 @@ pnpm-lock.yaml
 
 # Optional eslint cache
 .eslintcache
+
+# Parcel-bundler cache (https://parceljs.org/)
+.cache
+.parcel-cache
+
+# Next.js build output
+.next
+
+# Nuxt.js build / generate output
+.nuxt
+dist
+
+# Gatsby files
+.cache/
+public
+
+# Storybook build outputs
+.out
+.storybook-out
 
 # ===========================
 # ENVIRONMENT & CONFIGURATION
@@ -220,9 +240,21 @@ postman/sensitive/
 # ===========================
 # DEPLOYMENT & INFRASTRUCTURE
 # ===========================
+# Render deployment files
+.render/
+
 # Docker files (development overrides)
 docker-compose.override.yml
 .dockerignore.local
+
+# Vercel
+.vercel
+
+# Netlify
+.netlify/
+
+# Railway
+.railway/
 
 # Kubernetes configs
 k8s/secrets/
@@ -233,12 +265,17 @@ helm/values-local.yaml
 *.tfstate.backup
 .terraform/
 
+# Azure deployment
+.azure/
+
 # ===========================
 # EDITOR & IDE FILES
 # ===========================
 # VSCode
 .vscode/
 !.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/launch.json
 
 # JetBrains IDEs
 .idea/
@@ -253,6 +290,16 @@ helm/values-local.yaml
 # Sublime Text
 *.sublime-project
 *.sublime-workspace
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
 
 # ===========================
 # OS GENERATED FILES
@@ -330,6 +377,41 @@ migrations/backup/
 
 # Data seeding
 seed-data/production/
+
+# ===========================
+# SECURITY & COMPLIANCE
+# ===========================
+# Security scan results
+security-reports/
+vulnerability-reports/
+audit-reports/
+
+# Performance monitoring
+performance-logs/
+benchmark-results/
+
+# Error tracking
+sentry-debug-*
+.sentryclirc
+
+# ===========================
+# MISCELLANEOUS
+# ===========================
+# MacOS metadata
+.DS_Store
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# File system cache
+.fscache
 
 # ==============================================================================
 # END OF BACKEND .GITIGNORE
